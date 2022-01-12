@@ -6,14 +6,17 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
 }
 
 body {
   background-color: #ffffff;
   background-image: url(/images/bg-top.svg), url(/images/bg-bottom.svg);
+  background-color: #f6f6fe;
   background-position: right top, left bottom;
   background-repeat: no-repeat, no-repeat;
-  color: #000000;
+  color: #494c5f;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,12 +27,16 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  color: #b3b5c6;
 }
 
 main {
@@ -40,9 +47,13 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 article {
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,13 +64,14 @@ article {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: solid 0.2px;
   border-radius: 10px;
 }
 
 .Active {
-  background-color: #6B6EDD;
+  background-color: #696fdd;
   color: white;
+  background: #a3a8f0;
+  background: linear-gradient(500deg, #a3a8f0 20%, #696fdd 61%);
 }
 
 /* The switch - the box around the slider */
@@ -85,7 +97,7 @@ article {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #6B6EDD;
+  background-color: #696fdd;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -103,12 +115,12 @@ article {
 }
 
 input:checked + .slider {
-  background-color: #6B6EDD;
+  background-color: #696fdd;
 }
 
 input:focus + .slider {
-  -webkit-box-shadow: 0 0 1px #6B6EDD;
-          box-shadow: 0 0 1px #6B6EDD;
+  -webkit-box-shadow: 0 0 1px #696fdd;
+          box-shadow: 0 0 1px #696fdd;
 }
 
 input:checked + .slider:before {
