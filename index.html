@@ -31,11 +31,11 @@
       {{#each this}}
       <article class="{{#if Active}}Active{{/if}}" >
         <h6>{{Type}}</h6>
-        <h1>${{PriceAnnually}}</h1>
-        <!-- <h1>${{PriceMonthly}}</h1> -->
-        <h6>{{Storage}} Storage</h6>
-        <h6>{{UsersAllowed}} Users Allowed</h6>
-        <h6>Send up to {{UploadSize}} GB</h6>
+        <h1>{{PriceAnnually}}</h1>
+        <!-- <h1>{{PriceMonthly}}</h1> -->
+        <div>{{Storage}} Storage</div>
+        <div>{{UsersAllowed}} Users Allowed</div>
+        <div>Send up to {{UploadSize}} GB</div>
         <button>LEARN MORE</button>
       </article>
       

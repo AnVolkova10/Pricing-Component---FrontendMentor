@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    
     list-style: none;
     text-decoration: none;
     outline: none;
@@ -12,6 +12,8 @@
 $primary_color: #696fdd;
 $secundary_color: #a3a8f0;
 $font_color: #494c5f;
+$lines_color: #6d708d;
+$grisecito:    #b3b5c6;
 
 body {
     background-color: #ffffff;
@@ -26,41 +28,130 @@ body {
     align-items: center;
     
 }
+
+header {
+  font-size: x-large;
+  padding-bottom: 20px;
+}
 section {
     display: flex;
-    color: #b3b5c6;
-
+    color: $grisecito;
+    align-items: center;
+    padding-bottom: 30px;
+    
+    div {
+      font-size: x-small;
+      padding: 10px 15px 10px 15px;
+    }
 }
 main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    
+    h1 {
+      font-size: 300%;
+      border-bottom: solid 0.5px $grisecito;
+      padding-bottom: 20px;
+      margin-bottom: 0;
+    }
 }
 
 article {
   background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px 10px 10px 10px;
+  padding: 25px 20px;
+  height: 299px;
+  box-shadow: 6px 13px 22px -7px rgba(94,67,105,0.31);
+  -webkit-box-shadow: 6px 13px 22px -7px rgba(94,67,105,0.31);
+  -moz-box-shadow: 6px 13px 22px -7px rgba(94,67,105,0.31);
+  
+
+  div {
+    color: $lines_color;
+    display: inline-block;
+    font-size: x-small;
+    border-bottom: solid 0.5px $grisecito;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    
+  }
+  
+
+  button {
+    background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1) 61%);
+    color: #ffffff;
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px;
+    font-size: xx-small;
+    border: none;
+    border-radius: 5px;
+  }
+
+  button:hover {
+    background-color: white;
+    background: none;
+    color: $primary_color;
+    border: solid 0.5px;
+  }
+}
+
+h1::before {
+  font-size: x-large;
+  content: "$";
+  margin-right: 5px;
+  position: relative;
+  bottom: 8px;
 }
 
 .Active {
     background-color: $primary_color;
     color: white;
     background: rgb(163,168,240);
-background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1) 61%);
+    background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1) 61%);
+    width: auto;
+    height: 100%;
+    position: relative;
+    bottom:10px;
+    box-shadow: none;
+    
+    h1 {
+      border-color: $secundary_color;
+    }
+    
+    
+    button {
+      color: $primary_color;
+      background: linear-gradient(500deg, white 20%, white 61%);
+    }
+    
+    button:hover {
+    background-color:$primary_color;
+    background: none;
+    color: white;
+    border: solid 0.5px;
+    padding: 4.5px;
+    }
+
+    div {
+      color: white;
+      border-color:$secundary_color;
+    }
 }
-
-
-
 
 /* The switch - the box around the slider */
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
-    height: 34px;
+    width: 39px;
+    height: 22px;
+    
   }
   
   /* Hide default HTML checkbox */
@@ -78,7 +169,7 @@ background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1)
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $primary_color;
+    background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1) 61%);
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -86,27 +177,32 @@ background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1)
   .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
     background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }
   
+  input:hover + .slider {
+    background: none;
+    background-color: $secundary_color;
+  }
+
   input:checked + .slider {
-    background-color: $primary_color;
+    background-color: $secundary_color;
   }
   
   input:focus + .slider {
-    box-shadow: 0 0 1px $primary_color;
+    box-shadow: 0 0 1px $secundary_color;
   }
   
   input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
+    -webkit-transform: translateX(17px);
+    -ms-transform: translateX(17px);
+    transform: translateX(17px);
   }
   
   /* Rounded sliders */
