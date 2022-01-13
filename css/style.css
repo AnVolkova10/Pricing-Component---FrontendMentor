@@ -69,6 +69,10 @@ main h1 {
   border-bottom: solid 0.5px #b3b5c6;
   padding-bottom: 20px;
   margin-bottom: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  display: inline-block;
 }
 
 article {
@@ -98,7 +102,7 @@ article div {
   border-bottom: solid 0.5px #b3b5c6;
   margin: 0;
   text-align: center;
-  width: 100%;
+  width: 203.80px;
   padding: 10px 0px 10px 0px;
 }
 

@@ -22,7 +22,7 @@
     <section>
       <div>Annually</div>
       <label class="switch">
-        <input type="checkbox">
+        <input id="checkbox" type="checkbox" ">
         <span class="slider round"></span>
       </label>
       <div>Monthly</div>
@@ -31,14 +31,13 @@
       {{#each this}}
       <article class="{{#if Active}}Active{{/if}}" >
         <h6>{{Type}}</h6>
-        <h1>{{PriceAnnually}}</h1>
-        <!-- <h1>{{PriceMonthly}}</h1> -->
+        <h1 class="annually">{{PriceAnnually}}</h1>
+        <h1 style="display:none" class="monthly">{{PriceMonthly}}</h1>
         <div>{{Storage}} Storage</div>
         <div>{{UsersAllowed}} Users Allowed</div>
         <div>Send up to {{UploadSize}} GB</div>
         <button>LEARN MORE</button>
       </article>
-      
       {{/each}}
     </main>
     <footer>
