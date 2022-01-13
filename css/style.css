@@ -234,4 +234,23 @@ input:checked + .slider:before {
 .slider.round:before {
   border-radius: 50%;
 }
+
+/* MEDIA QUERY */
+@media screen and (max-width: 375px) {
+  main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Active {
+    bottom: 0px;
+  }
+  footer {
+    text-align: center;
+  }
+  article {
+    margin-bottom: 25px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
