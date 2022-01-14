@@ -120,7 +120,7 @@ h1::before {
     background: rgb(163,168,240);
     background: linear-gradient(500deg, rgba(163,168,240,1) 20%, rgba(105,111,221,1) 61%);
     width: auto;
-    height: 100%;
+    height: 322.375px;
     position: relative;
     bottom:10px;
     box-shadow: none;
@@ -133,6 +133,8 @@ h1::before {
     button {
       color: $primary_color;
       background: linear-gradient(500deg, white 20%, white 61%);
+      position: relative;
+      top: 10px;
     }
     
     button:hover {
